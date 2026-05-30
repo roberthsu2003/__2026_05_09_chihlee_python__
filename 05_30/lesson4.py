@@ -45,3 +45,21 @@ print(students['math'])
 print(students['discover'])
 print(students['english'])
 print(students['history'])
+
+#===================
+#list
+scores1 = [89, 92, 76, 91, 77]
+for s in scores1:
+	print(s)
+	
+#==================
+#dict
+students = {
+	'chinese':89,
+	'english':94,
+	'math':65,
+	'history':92,
+	'discover': 95}
+
+for key in students:
+	print(students[key]) 

@@ -28,3 +28,20 @@ print(scores1[2])
 print(scores1[3])
 print(scores1[4])
 #scores1[0] = 100
+
+#==================
+
+# dictionary
+students = {
+	'chinese':89,
+	'english':94,
+	'math':65,
+	'history':92,
+	'discover': 95}
+	
+print(students)
+print(students['chinese'])
+print(students['math'])
+print(students['discover'])
+print(students['english'])
+print(students['history'])

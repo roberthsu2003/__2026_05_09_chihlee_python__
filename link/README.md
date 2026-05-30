@@ -23,3 +23,11 @@ https://www.youtube.com/watch?v=Gl9WEQHFj6Y
 https://youtube.com/live/opOrhlsmpGk
 
 ---
+
+## 2026_05_30_早上
+https://youtube.com/live/FCF8bax8pkc
+
+## 2026_05_30_下午
+https://youtube.com/live/o9rvAkv8ljk
+
+---

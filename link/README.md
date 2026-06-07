@@ -35,4 +35,7 @@ https://youtube.com/live/o9rvAkv8ljk
 ## 2026_06_06_早上
 https://www.youtube.com/watch?v=liCGUFj2qyQ
 
+## 2026_06_06_下午
+https://youtube.com/live/OXX6GATTqTY
+
 ---

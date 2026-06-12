@@ -102,6 +102,7 @@ def main():
         print(df.tail())
 
         output_file = Path(__file__).with_name("youbike_report.pdf")
+        
         export_to_pdf(df, output_file)
 
     else:

@@ -39,3 +39,11 @@ https://www.youtube.com/watch?v=liCGUFj2qyQ
 https://youtube.com/live/OXX6GATTqTY
 
 ---
+
+## 2026_06_13_上午
+https://youtube.com/live/V1lOT_8hTCY
+
+## 2026_06_13_下午
+https://meet.google.com/oam-rfvj-egs
+
+---

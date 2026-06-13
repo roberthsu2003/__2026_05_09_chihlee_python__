@@ -98,9 +98,8 @@ def main():
 
         # list[dict] -> DataFrame
         df:DataFrame = pd.DataFrame(data=data)
-
-        print(df.tail())
-
+        
+        #Output path 是我們輸出的檔案的絕對路徑
         output_file = Path.cwd().with_name("youbike_report.pdf")
         
         export_to_pdf(df, output_file)

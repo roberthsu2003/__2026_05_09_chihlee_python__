@@ -8,6 +8,7 @@ dependencies = [
     "matplotlib>=3.11.0",
     "numpy>=2.4.6",
     "pandas>=3.0.3",
+    "pyside6>=6.11.1",
     "reportlab>=4.2.2",
     "requests>=2.34.2",
     "streamlit>=1.58.0",

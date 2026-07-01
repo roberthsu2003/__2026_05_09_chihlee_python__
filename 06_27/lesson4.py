@@ -37,7 +37,7 @@ QLabel {
     color: #e1e1e6;
     font-size: 14px;
     font-weight: 500;
-    font-family: ".AppleSystemUIFont", "Inter", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+    font-family: ".AppleSystemUIFont", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
 }
 
 QLabel#chartTitle {
@@ -53,7 +53,7 @@ QLineEdit {
     border-radius: 8px;
     padding: 10px 14px;
     font-size: 14px;
-    font-family: ".AppleSystemUIFont", "Inter", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+    font-family: ".AppleSystemUIFont", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
 }
 
 QLineEdit:focus {
@@ -69,7 +69,7 @@ QPushButton {
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 600;
-    font-family: ".AppleSystemUIFont", "Inter", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+    font-family: ".AppleSystemUIFont", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
 }
 
 QPushButton:hover {
@@ -87,7 +87,7 @@ QTableWidget {
     border-radius: 10px;
     gridline-color: #29292e;
     font-size: 13px;
-    font-family: ".AppleSystemUIFont", "Inter", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+    font-family: ".AppleSystemUIFont", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
     outline: none;
 }
 
@@ -110,7 +110,7 @@ QHeaderView::section {
     border-bottom: 2px solid #29292e;
     font-weight: 700;
     font-size: 13px;
-    font-family: ".AppleSystemUIFont", "Inter", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+    font-family: ".AppleSystemUIFont", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
 }
 
 QScrollArea {

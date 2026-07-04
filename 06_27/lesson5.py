@@ -22,46 +22,46 @@ from PySide6.QtGui import QFont, QColor
 import pyqtgraph as pg
 
 # 設定 PyQtGraph 全域選項（在建立任何 Widget 之前設定）
-pg.setConfigOption('background', '#18181b')  # 設定圖表背景色為深灰色 (Zinc 800)
-pg.setConfigOption('foreground', '#d4d4d8')  # 設定圖表前景色為淺灰色 (Zinc 300)
+pg.setConfigOption('background', '#fdf2f8')  # 設定圖表背景色為柔粉白
+pg.setConfigOption('foreground', '#831843')  # 設定圖表前景色為深玫瑰色
 pg.setConfigOptions(antialias=True)          # 預設啟用抗鋸齒以提供平滑線條
 
-# 現代化深色 UI 樣式表 (CSS/QSS)
+# 柔美粉色系 UI 樣式表 (女性友善配色)
 MODERN_STYLE = """
 QMainWindow {
-    background-color: #09090b;
+    background-color: #fdf2f8;
 }
 
 QWidget#centralWidget {
-    background-color: #09090b;
+    background-color: #fdf2f8;
 }
 
 QLabel {
-    color: #e4e4e7;
+    color: #831843;
     font-family: ".AppleSystemUIFont", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
     font-size: 13px;
 }
 
 QLabel#titleLabel {
-    color: #ffffff;
+    color: #9d174d;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 4px;
 }
 
 QLabel#subTitleLabel {
-    color: #71717a;
+    color: #db2777;
     font-size: 12px;
     margin-bottom: 12px;
 }
 
 QGroupBox {
-    border: 1px solid #27272a;
+    border: 1px solid #fbcfe8;
     border-radius: 8px;
     margin-top: 12px;
     padding-top: 16px;
     font-weight: 600;
-    color: #a1a1aa;
+    color: #9d174d;
     font-family: ".AppleSystemUIFont", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
 }
 
@@ -70,11 +70,11 @@ QGroupBox::title {
     subcontrol-position: top left;
     left: 8px;
     padding: 0 5px;
-    background-color: #09090b;
+    background-color: #fdf2f8;
 }
 
 QPushButton {
-    background-color: #7c3aed;
+    background-color: #ec4899;
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -85,55 +85,55 @@ QPushButton {
 }
 
 QPushButton:hover {
-    background-color: #8b5cf6;
+    background-color: #f472b6;
 }
 
 QPushButton:pressed {
-    background-color: #6d28d9;
+    background-color: #db2777;
 }
 
 /* 控制播放暫停按鈕的特殊樣式 */
 QPushButton#playPauseBtn {
-    background-color: #10b981;
-}
-QPushButton#playPauseBtn:hover {
     background-color: #34d399;
 }
+QPushButton#playPauseBtn:hover {
+    background-color: #6ee7b7;
+}
 QPushButton#playPauseBtn:pressed {
-    background-color: #059669;
+    background-color: #10b981;
 }
 
 QPushButton#playPauseBtn[checked="true"] {
-    background-color: #ef4444;
+    background-color: #fb7185;
 }
 QPushButton#playPauseBtn[checked="true"]:hover {
-    background-color: #f87171;
+    background-color: #fda4af;
 }
 QPushButton#playPauseBtn[checked="true"]:pressed {
-    background-color: #dc2626;
+    background-color: #f43f5e;
 }
 
 QPushButton#actionBtn {
-    background-color: #27272a;
-    color: #e4e4e7;
-    border: 1px solid #3f3f46;
+    background-color: #fce7f3;
+    color: #831843;
+    border: 1px solid #fbcfe8;
 }
 QPushButton#actionBtn:hover {
-    background-color: #3f3f46;
+    background-color: #fbcfe8;
 }
 QPushButton#actionBtn:pressed {
-    background-color: #52525b;
+    background-color: #f9a8d4;
 }
 
 QSlider::groove:horizontal {
-    border: 1px solid #27272a;
+    border: 1px solid #fbcfe8;
     height: 6px;
-    background: #18181b;
+    background: #fce7f3;
     border-radius: 3px;
 }
 
 QSlider::handle:horizontal {
-    background: #7c3aed;
+    background: #ec4899;
     border: none;
     width: 14px;
     margin: -4px 0;
@@ -141,61 +141,61 @@ QSlider::handle:horizontal {
 }
 
 QSlider::handle:horizontal:hover {
-    background: #8b5cf6;
+    background: #f472b6;
 }
 
 QComboBox {
-    background-color: #18181b;
-    border: 1px solid #27272a;
+    background-color: #ffffff;
+    border: 1px solid #fbcfe8;
     border-radius: 6px;
     padding: 6px 12px;
-    color: #e4e4e7;
+    color: #831843;
     font-size: 13px;
     font-family: ".AppleSystemUIFont", "Noto Sans TC", sans-serif;
     min-width: 100px;
 }
 
 QComboBox:on {
-    border: 1px solid #7c3aed;
+    border: 1px solid #ec4899;
 }
 
 QComboBox QAbstractItemView {
-    background-color: #18181b;
-    border: 1px solid #27272a;
-    selection-background-color: #7c3aed;
-    selection-color: #ffffff;
-    color: #e4e4e7;
+    background-color: #ffffff;
+    border: 1px solid #fbcfe8;
+    selection-background-color: #fce7f3;
+    selection-color: #9d174d;
+    color: #831843;
 }
 
 QCheckBox {
-    color: #e4e4e7;
+    color: #831843;
     spacing: 8px;
 }
 
 QCheckBox::indicator {
     width: 18px;
     height: 18px;
-    border: 1px solid #27272a;
+    border: 1px solid #fbcfe8;
     border-radius: 4px;
-    background-color: #18181b;
+    background-color: #ffffff;
 }
 
 QCheckBox::indicator:checked {
-    background-color: #7c3aed;
-    border: 1px solid #7c3aed;
+    background-color: #ec4899;
+    border: 1px solid #ec4899;
 }
 
 QTabWidget::pane {
-    border: 1px solid #27272a;
+    border: 1px solid #fbcfe8;
     border-radius: 8px;
-    background-color: #18181b;
+    background-color: #ffffff;
     padding: 4px;
 }
 
 QTabBar::tab {
-    background-color: #09090b;
-    color: #a1a1aa;
-    border: 1px solid #27272a;
+    background-color: #fce7f3;
+    color: #9d174d;
+    border: 1px solid #fbcfe8;
     border-bottom: none;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -206,33 +206,33 @@ QTabBar::tab {
 }
 
 QTabBar::tab:selected {
-    background-color: #18181b;
-    color: #ffffff;
-    border: 1px solid #27272a;
-    border-bottom: 1px solid #18181b;
+    background-color: #ffffff;
+    color: #be185d;
+    border: 1px solid #fbcfe8;
+    border-bottom: 1px solid #ffffff;
     font-weight: 600;
 }
 
 QTabBar::tab:hover:!selected {
-    background-color: #18181b;
-    color: #e4e4e7;
+    background-color: #fbcfe8;
+    color: #831843;
 }
 
 QScrollBar:vertical {
-    background: #09090b;
+    background: #fdf2f8;
     width: 10px;
     margin: 0px;
     border-radius: 5px;
 }
 
 QScrollBar::handle:vertical {
-    background: #27272a;
+    background: #fbcfe8;
     min-height: 20px;
     border-radius: 5px;
 }
 
 QScrollBar::handle:vertical:hover {
-    background: #3f3f46;
+    background: #f9a8d4;
 }
 
 QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
@@ -240,20 +240,20 @@ QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
 }
 
 QScrollBar:horizontal {
-    background: #09090b;
-    height: 10px;
+    background: #fdf2f8;
+    width: 10px;
     margin: 0px;
     border-radius: 5px;
 }
 
 QScrollBar::handle:horizontal {
-    background: #27272a;
+    background: #fbcfe8;
     min-width: 20px;
     border-radius: 5px;
 }
 
 QScrollBar::handle:horizontal:hover {
-    background: #3f3f46;
+    background: #f9a8d4;
 }
 
 QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
@@ -261,9 +261,9 @@ QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
 }
 
 QStatusBar {
-    background-color: #09090b;
-    color: #71717a;
-    border-top: 1px solid #27272a;
+    background-color: #fdf2f8;
+    color: #db2777;
+    border-top: 1px solid #fbcfe8;
     font-family: ".AppleSystemUIFont", "Noto Sans TC", sans-serif;
 }
 """
@@ -331,7 +331,7 @@ class PyQtGraphDemoApp(QMainWindow):
 
         # 建立 QSplitter 用於自由調整左側控制欄與右側圖表大小
         splitter = QSplitter(Qt.Horizontal)
-        splitter.setStyleSheet("QSplitter::handle { background-color: #27272a; width: 2px; }")
+        splitter.setStyleSheet("QSplitter::handle { background-color: #fbcfe8; width: 2px; }")
 
         # ================== 左側側邊欄：控制面板 ==================
         sidebar = QWidget()
@@ -369,7 +369,7 @@ class PyQtGraphDemoApp(QMainWindow):
 
         # 實測 FPS 顯示
         self.fps_display = QLabel("實測刷新率: 0.0 FPS")
-        self.fps_display.setStyleSheet("color: #10b981; font-weight: bold;")
+        self.fps_display.setStyleSheet("color: #ec4899; font-weight: bold;")
         global_layout.addRow("引擎狀態:", self.fps_display)
 
         # 抗鋸齒開關
@@ -445,7 +445,7 @@ class PyQtGraphDemoApp(QMainWindow):
             "3. 在下方圖表使用滑鼠滾輪縮放或右鍵拖曳時，上方選取框亦會<b>即時逆向同步</b>。"
         )
         info_label.setWordWrap(True)
-        info_label.setStyleSheet("color: #a1a1aa; line-height: 15px;")
+        info_label.setStyleSheet("color: #9d174d; line-height: 15px;")
         zoom_group_layout.addWidget(info_label)
 
         self.zoom_regen_btn = QPushButton("重新生成 random walk 趨勢線")
@@ -489,7 +489,7 @@ class PyQtGraphDemoApp(QMainWindow):
 
         info_heat = QLabel("提示：右側的色彩條 (Histogram) 可以直接用滑鼠拖曳上下界限來調整影像對比度。")
         info_heat.setWordWrap(True)
-        info_heat.setStyleSheet("color: #71717a; font-size: 11px;")
+        info_heat.setStyleSheet("color: #db2777; font-size: 11px;")
         heatmap_group_layout.addRow(info_heat)
 
         heatmap_layout.addRow(heatmap_group)
@@ -525,7 +525,7 @@ class PyQtGraphDemoApp(QMainWindow):
             "3. 點選後，視窗底部狀態列將永久保留該點的資訊。"
         )
         info_scatter.setWordWrap(True)
-        info_scatter.setStyleSheet("color: #a1a1aa; line-height: 15px;")
+        info_scatter.setStyleSheet("color: #9d174d; line-height: 15px;")
         scatter_group_layout.addRow(info_scatter)
 
         scatter_layout.addRow(scatter_group)
@@ -573,33 +573,33 @@ class PyQtGraphDemoApp(QMainWindow):
         self.p1.showGrid(x=True, y=True, alpha=0.25)
         self.p1.setLabel('left', '振幅', units='V')
         self.p1.setLabel('bottom', '時間點', units='sample')
-        self.curve1 = self.p1.plot(pen=pg.mkPen(color='#10b981', width=2), name="CH1")
+        self.curve1 = self.p1.plot(pen=pg.mkPen(color='#ec4899', width=2), name="CH1")
 
         # 通道二
         self.p2 = self.osc_widget.addPlot(row=1, col=0, title="通道二：含噪聲波 (CH2 Sine + Noise)")
         self.p2.showGrid(x=True, y=True, alpha=0.25)
         self.p2.setLabel('left', '振幅', units='V')
         self.p2.setLabel('bottom', '時間點', units='sample')
-        self.curve2 = self.p2.plot(pen=pg.mkPen(color='#3b82f6', width=1.5), name="CH2")
+        self.curve2 = self.p2.plot(pen=pg.mkPen(color='#a855f7', width=1.5), name="CH2")
 
         # 連動兩個圖表的 X 軸限制 (縮放與拖曳時，兩者會自動對齊)
         self.p2.setXLink(self.p1)
 
         # 建立十字定位線 (CH1)
-        self.vLine1 = pg.InfiniteLine(angle=90, movable=False, pen=pg.mkPen('#71717a', width=1, style=Qt.DashLine))
-        self.hLine1 = pg.InfiniteLine(angle=0, movable=False, pen=pg.mkPen('#71717a', width=1, style=Qt.DashLine))
+        self.vLine1 = pg.InfiniteLine(angle=90, movable=False, pen=pg.mkPen('#f472b6', width=1, style=Qt.DashLine))
+        self.hLine1 = pg.InfiniteLine(angle=0, movable=False, pen=pg.mkPen('#f472b6', width=1, style=Qt.DashLine))
         self.p1.addItem(self.vLine1, ignoreBounds=True)
         self.p1.addItem(self.hLine1, ignoreBounds=True)
 
         # 建立十字定位線 (CH2)
-        self.vLine2 = pg.InfiniteLine(angle=90, movable=False, pen=pg.mkPen('#71717a', width=1, style=Qt.DashLine))
-        self.hLine2 = pg.InfiniteLine(angle=0, movable=False, pen=pg.mkPen('#71717a', width=1, style=Qt.DashLine))
+        self.vLine2 = pg.InfiniteLine(angle=90, movable=False, pen=pg.mkPen('#c084fc', width=1, style=Qt.DashLine))
+        self.hLine2 = pg.InfiniteLine(angle=0, movable=False, pen=pg.mkPen('#c084fc', width=1, style=Qt.DashLine))
         self.p2.addItem(self.vLine2, ignoreBounds=True)
         self.p2.addItem(self.hLine2, ignoreBounds=True)
 
         # 用於圖表內的座標文字顯示
-        self.coord_label1 = pg.TextItem(anchor=(1, 0), color='#10b981')
-        self.coord_label2 = pg.TextItem(anchor=(1, 0), color='#3b82f6')
+        self.coord_label1 = pg.TextItem(anchor=(1, 0), color='#ec4899')
+        self.coord_label2 = pg.TextItem(anchor=(1, 0), color='#a855f7')
         self.p1.addItem(self.coord_label1)
         self.p2.addItem(self.coord_label2)
 
@@ -662,7 +662,7 @@ class PyQtGraphDemoApp(QMainWindow):
         # 下方的局部放大圖
         self.p_detail = self.zoom_widget.addPlot(row=1, col=0, title="選取範圍局部放大 (雙向同步)")
         self.p_detail.showGrid(x=True, y=True, alpha=0.25)
-        self.p_detail.getAxis('bottom').setPen(pg.mkPen('#7c3aed', width=1))
+        self.p_detail.getAxis('bottom').setPen(pg.mkPen('#ec4899', width=1))
 
         # 建立區間選擇器 (LinearRegionItem)
         self.region = pg.LinearRegionItem([3000, 5000])
@@ -695,8 +695,8 @@ class PyQtGraphDemoApp(QMainWindow):
         self.p_overview.addItem(self.region)
 
         # 繪製曲線
-        self.p_overview.plot(self.zoom_data, pen=pg.mkPen('#71717a', width=1))
-        self.p_detail.plot(self.zoom_data, pen=pg.mkPen('#c084fc', width=1.8))
+        self.p_overview.plot(self.zoom_data, pen=pg.mkPen('#f9a8d4', width=1))
+        self.p_detail.plot(self.zoom_data, pen=pg.mkPen('#ec4899', width=1.8))
         
         # 重設區域與顯示範圍
         self.region.setRegion([3000, 5000])
@@ -779,7 +779,7 @@ class PyQtGraphDemoApp(QMainWindow):
         # 用於標記點選的紅色光圈 ScatterItem
         self.clicked_marker = pg.ScatterPlotItem(
             size=18, 
-            pen=pg.mkPen('#ef4444', width=2), 
+            pen=pg.mkPen('#be185d', width=2), 
             brush=pg.mkBrush(None), 
             symbol='o'
         )
@@ -812,15 +812,15 @@ class PyQtGraphDemoApp(QMainWindow):
 
         # 建立高互動性 ScatterPlotItem
         # 建立 QColor 並設定 alpha，解決 pyqtgraph.mkBrush 無法直接解析字串加 alpha 的問題
-        s_color = pg.mkColor('#8b5cf6')
+        s_color = pg.mkColor('#ec4899')
         s_color.setAlpha(150)
-        h_color = pg.mkColor('#f43f5e')
+        h_color = pg.mkColor('#be185d')
         h_color.setAlpha(220)
 
         # hoverable=True 讓滑鼠移過時會自動觸發 hover 事件，並改用 hoverBrush / hoverPen 的外觀
         self.scatter_item = pg.ScatterPlotItem(
             size=10, 
-            pen=pg.mkPen('#18181b', width=0.5), 
+            pen=pg.mkPen('#fbcfe8', width=0.5), 
             brush=pg.mkBrush(s_color),
             hoverable=True,
             hoverBrush=pg.mkBrush(h_color),  # 懸停時變為亮粉紅色

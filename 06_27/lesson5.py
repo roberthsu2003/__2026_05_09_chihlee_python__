@@ -22,11 +22,17 @@ from PySide6.QtGui import QFont, QColor
 import pyqtgraph as pg
 
 # 設定 PyQtGraph 全域選項（在建立任何 Widget 之前設定）
-pg.setConfigOption('background', '#fdf2f8')  # 設定圖表背景色為柔粉白
+pg.setConfigOption('background', "#4b7cd1")  # 設定圖表背景色為柔粉白
 pg.setConfigOption('foreground', '#831843')  # 設定圖表前景色為深玫瑰色
 pg.setConfigOptions(antialias=True)          # 預設啟用抗鋸齒以提供平滑線條
 
-# 柔美粉色系 UI 樣式表 (女性友善配色)
+
+# MODERN_STYLE 是一個「多行字串」變數，裡面寫的是 QSS 語法
+# QSS = Qt Style Sheet，長得很像 CSS，專門用來幫 PySide6 的視窗元件「化妝」
+# 三個雙引號 """...""" 是 Python 的多行字串語法，可以跨行寫內容
+# 裡面的 "QMainWindow"、"QLabel" 這些是 Qt 元件的名稱
+# 大括號 { } 裡面放的是要套用的樣式規則
+# 這整個字串最後會透過 setStyleSheet(MODERN_STYLE) 套用到整個視窗
 MODERN_STYLE = """
 QMainWindow {
     background-color: #fdf2f8;
@@ -273,7 +279,7 @@ class PyQtGraphDemoApp(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("PyQtGraph 強大功能測試與展示儀表板")
+        self.setWindowTitle("國堂老師展示-強大功能測試與展示儀表板")
         self.resize(1200, 800)
         self.setStyleSheet(MODERN_STYLE)
 

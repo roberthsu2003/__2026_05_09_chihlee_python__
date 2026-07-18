@@ -63,3 +63,8 @@ https://www.youtube.com/watch?v=YlV_waBSuMk
 https://www.youtube.com/watch?v=jQNJ9nSRPnE
 
 ---
+
+## 2026_07_18_上午
+https://www.youtube.com/watch?v=-mIjCyINGcw
+
+---
